@@ -1,0 +1,14 @@
+package com.example.demo.Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.demo.Beans.User;
+import com.example.demo.dao.Appointmentdao;
+
+public class AppointmentService {
+ @Autowired Appointmentdao appointmentdao;
+	public void post(User user) {
+		
+	}
+
+}

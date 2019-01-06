@@ -1,0 +1,13 @@
+package com.mycompany.Controllers;
+
+import org.springframework.data.rest.webmvc.RepositoryRestController;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RepositoryRestController
+public class HomeController {
+@RequestMapping("/login")
+public String say()
+{
+	return "shashi";
+}
+}

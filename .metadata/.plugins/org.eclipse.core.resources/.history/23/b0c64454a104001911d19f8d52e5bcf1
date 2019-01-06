@@ -1,0 +1,35 @@
+package com.example.demo.Controller;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table (name="user_details")
+public class UserDetails {
+	@Id
+	int uid;
+	int uname;
+	public UserDetails() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public UserDetails(int uid, int uname) {
+		super();
+		this.uid = uid;
+		this.uname = uname;
+	}
+	public int getUid() {
+		return uid;
+	}
+	public void setUid(int uid) {
+		this.uid = uid;
+	}
+	public int getUname() {
+		return uname;
+	}
+	public void setUname(int uname) {
+		this.uname = uname;
+	}
+	
+}

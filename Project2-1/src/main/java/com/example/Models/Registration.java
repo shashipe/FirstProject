@@ -1,0 +1,69 @@
+package com.example.Models;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import org.springframework.data.annotation.Id;
+@Entity
+@Table(name = "EMPLOYEE")
+public class Registration {
+	
+@Id
+private String email;
+@Column
+private String username;
+@Column
+private String pwd;
+@Column
+private String id;
+@Column
+private String streetAddress;
+public Registration() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+public Registration(String email, String username, String pwd, String id, String streetAddress) {
+	super();
+	this.email = email;
+	this.username = username;
+	this.pwd = pwd;
+	this.id = id;
+	this.streetAddress = streetAddress;
+}
+public String getEmail() {
+	return email;
+}
+public void setEmail(String email) {
+	this.email = email;
+}
+public String getUsername() {
+	return username;
+}
+public void setUsername(String username) {
+	this.username = username;
+}
+public String getPwd() {
+	return pwd;
+}
+public void setPwd(String pwd) {
+	this.pwd = pwd;
+}
+public String getId() {
+	return id;
+}
+public void setId(String id) {
+	this.id = id;
+}
+public String getStreetAddress() {
+	return streetAddress;
+}
+public void setStreetAddress(String streetAddress) {
+	this.streetAddress = streetAddress;
+}
+@Override
+public String toString() {
+	return "Registration [email=" + email + ", username=" + username + ", pwd=" + pwd + ", id=" + id
+			+ ", streetAddress=" + streetAddress + "]";
+}
+}

@@ -1,0 +1,12 @@
+package com.example.demo.Service;
+
+import com.example.demo.Beans.User;
+
+public class AppointmentService {
+
+	public void post(User user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,68 @@
+package com.example.demo;
+
+
+import java.util.Optional;
+import com.example.demo.Demo;
+import com.example.demo.Repository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+@RestController
+public class HomeController {
+@Autowired Repository repository;
+@Autowired DemoService demoService;
+	@GetMapping("/login")
+	public String sayHi()
+	{
+		return "login";
+	}
+	@GetMapping("/delete/{id}")
+	public String deleteUser(@PathVariable String id) 
+	{
+		repository.deleteById(id);
+		return "success";
+		
+	}
+	@GetMapping("/get/{id}")
+	public String getUser(@PathVariable String id) 
+	{
+		Optional<Demo> demo=repository.findById(id);
+		System.out.println(demo);
+		return "success";
+	}
+	@GetMapping("/post")
+	public String postUser()
+	{
+		Demo demo=new Demo("chintu","reddy");
+		repository.save(demo);
+		return "success";
+	}
+	
+	@GetMapping("/updateUser/{id}")
+	public String updateUser(@PathVariable String id )
+	{
+		Demo demo=new Demo();
+		demo.setFname(id);
+		demo.setLname("pal");
+		repository.save(demo);
+		return "success";
+	}
+	@GetMapping("/gets/id")
+	public Bean getUser1(String id) {
+		 
+		  //enity
+		Object demo= repository.findById(id);
+		  //bean
+		  Bean bean=new Bean();
+		  bean.setFname(((Demo) demo).getFname());
+		  bean.setLname(((Demo) demo).getLname());
+		  return bean;
+		  
+		}
+
+}

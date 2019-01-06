@@ -1,0 +1,16 @@
+package com.mycompany.demo.Services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.Bean;
+import com.example.demo.Repository;
+@Service
+public class DemoService {
+	@Autowired Repository repository;
+
+	public void saveUser(Bean bean) {
+		repository.save(bean);
+		
+	}
+}

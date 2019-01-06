@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ServletInitializer.java&apos; to &apos;com.mycompany.demo-1/src/main/java/com.example.demo&apos;&#x0D;&#x0A;- Original project: &apos;SpringBootForArka&apos;&#x0D;&#x0A;- Destination element: &apos;com.mycompany.demo-1/src/main/java/com.example.demo&apos;&#x0D;&#x0A;- Original element: &apos;com.springbootarka.oct.ServletInitializer.java&apos;" description="Copy compilation unit" destination="=com.mycompany.demo-1/src\/main\/java&lt;com.example.demo" element1="/src\/main\/java&lt;com.springbootarka.oct{ServletInitializer.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1543971982140" units="1" version="1.0"/>
+</session>

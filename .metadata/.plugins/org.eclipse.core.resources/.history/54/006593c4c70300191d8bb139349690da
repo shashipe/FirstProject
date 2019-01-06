@@ -1,0 +1,26 @@
+package com.example.demo.Controller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.Bean.UserBean;
+import com.example.demo.Entity.User;
+import com.example.demo.Entity.UserProfile;
+
+@RestController
+public class UserController {
+
+	@PostMapping("/saveUser")
+	public void saveUser(@RequestBody UserBean userBean)
+	{
+		
+		User user=new User();
+		UserProfile userProfile =new UserProfile();
+		user.setId(userBean.getId());
+		user.setFirstName(userBean.getFirstName());
+		user.setLastName(userBean.getLastName());
+		user.setEmail(userBean.getEmail());
+		user.setPassword(userBean.getPassword());
+	}
+}

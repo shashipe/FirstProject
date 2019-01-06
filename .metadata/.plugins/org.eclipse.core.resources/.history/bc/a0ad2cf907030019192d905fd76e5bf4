@@ -1,0 +1,26 @@
+package com.example.demo.Service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
+
+import com.example.demo.Entity.AppointmentEntity;
+import com.example.demo.dao.Appointmentdao;
+@Service
+public class AppointmentService {
+ @Autowired Appointmentdao appointmentdao;
+	
+	public void save(AppointmentEntity appointmentEntity) {
+		appointmentdao.save(appointmentEntity);
+	}
+
+	
+
+	public void update(AppointmentEntity appointmentEntity, Long id) {
+		AppointmentEntity appointmentEntity1=new AppointmentEntity();
+		
+	}
+
+}

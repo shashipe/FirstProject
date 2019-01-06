@@ -1,0 +1,16 @@
+package com.mycompany.Controllers;
+
+
+import org.springframework.data.rest.webmvc.RepositoryRestController;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RepositoryRestController
+public class HomeController {
+	 @RequestMapping("/")
+	  public String index(Model model){
+	  //    logger.info("Setting index page title to Mainstay - Web");
+	      model.addAttribute("title","Mainstay - Web");
+	      return "index";
+	  }
+}

@@ -1,0 +1,26 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class Jdbc {
+public static void main(String[] args) throws SQLException {
+	String url = "jdbc:mysql://localhost:3306/sampledatabase";
+    //String url = "jdbc:odbc://123.45.67.8:8080/bank"
+    //String url = "jdbc:monod://wwww.companywebsite.com:12712/users"
+    //String url = "jdbc:monod://cloud.end.point.for.db:12712/users"
+    String username = "shashi";
+    String password = "shashi";
+
+    Connection con = DriverManager.getConnection(url, username, password);
+    String query = "select * from users";
+    java.sql.Statement stmt = con.createStatement();
+    ResultSet rs = stmt.executeQuery(query);
+    while(rs.next())
+    {
+    	System.out.println(rs.getString(1));
+    	System.out.println(rs.getString(2));
+    	System.out.println(rs.getString(3));System.out.println(rs.getString(4));
+    }
+}
+}
